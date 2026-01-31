@@ -21,7 +21,7 @@ model User {
   name        String
   role        Role     @default(CUSTOMER)
   
-  // Profile Details [cite: 32, 33]
+  // details needs for vendor registration
   companyName String?
   gstin       String?  // Mandatory for invoicing logic
 
