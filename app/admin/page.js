@@ -186,6 +186,12 @@ export default function AdminDashboard() {
               >
                 Manage Users
               </button>
+              <button
+                onClick={() => router.push('/admin/pending-products')}
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium"
+              >
+                Manage Pending Products
+              </button>
             </div>
           </div>
         </div>
