@@ -23,7 +23,8 @@ import {
   FileText,
   Plus,
   Minus,
-  Package
+  Package,
+  BarChart3
 } from 'lucide-react'
 import { toast } from '../../lib/toast'
 
@@ -108,6 +109,9 @@ const VendorDashboard = () => {
               <Link href="/vendor/products" className="hover:text-[#FF9B51] flex items-center gap-1">
                 Products
               </Link>
+              <Link href="/vendor/reports" className="hover:text-[#FF9B51] flex items-center gap-1">
+                Reports
+              </Link>
             </div>
           </div>
 
@@ -146,6 +150,9 @@ const VendorDashboard = () => {
                   </Link>
                   <Link href="/vendor/orders" className="w-full flex items-center gap-3 px-4 py-3 text-xs font-bold hover:bg-[#EAEFEF] transition-colors">
                     <FileText size={14} /> My Orders
+                  </Link>
+                  <Link href="/vendor/reports" className="w-full flex items-center gap-3 px-4 py-3 text-xs font-bold hover:bg-[#EAEFEF] transition-colors">
+                    <BarChart3 size={14} /> Reports
                   </Link>
                   <button className="w-full flex items-center gap-3 px-4 py-3 text-xs font-bold hover:bg-[#EAEFEF] transition-colors">
                     <Settings size={14} /> Settings
