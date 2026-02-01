@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useSession, signOut } from 'next-auth/react';
-import { useRouter } from 'next/navigation'
 import { 
   Search, Calendar, CheckCircle, ArrowRight, Download, 
   Activity, ShieldCheck, User, Filter, LayoutDashboard, 
@@ -11,21 +10,7 @@ import {
 } from 'lucide-react';
 
 export default function RentalHackathonPortal() {
-  const { data: session, status } = useSession();
-  const router = useRouter()
-
-  // Redirect users based on role: only customers remain on this page
-  useEffect(() => {
-    if (status === 'authenticated') {
-      const role = session?.user?.role
-      if (!role) return
-      if (role === 'VENDOR') {
-        router.push('/vendor')
-      } else if (role === 'ADMIN') {
-        router.push('/admin')
-      }
-    }
-  }, [status, session, router])
+  const { data: session } = useSession();
   // Removed view state and role switcher logic
   const [dates, setDates] = useState({ start: '', end: '' });
   const [activeCategory, setActiveCategory] = useState('All');
